@@ -3,7 +3,7 @@
 
 
 ## General Information
-This repo is the output of closely following the (official k6 guide)[https://k6.io/docs/using-k6/modules/] on how to use Node.js modules with k6.
+This repo is the output of closely following the [official k6 guide](https://k6.io/docs/using-k6/modules/) on how to use Node.js modules with k6.
 
 ### Project Structure
 - `/dist`
@@ -18,11 +18,11 @@ This repo is the output of closely following the (official k6 guide)[https://k6.
 	- The configuration used for the webpack module. Taken from the [official documentation from k6](https://k6.io/docs/using-k6/modules/#configuring-webpack)
 
 
-### Divergancy from the k6 tutorial
+### Divergency from the k6 tutorial
 - The `HelloNode.js` doesn't exactly match the example scripts used in the k6 documentation. However, it serves the purpose.
 	- It defines an array and `console.log` outputs the return value from a `lodash` command to verify that the Node.js import works
 	- It makes a simgle http GET request to the `http://test.k6.io` URL to verify that the k6 part works. 
-
+- The `webpack.config.js` was altered not to use the `/src/login.test.js` script as an entry, but the `/src/HelloNode.js` script instead.
 
 ### Sources
 - https://k6.io/docs/using-k6/http-requests/
